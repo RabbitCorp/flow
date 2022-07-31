@@ -1,8 +1,0 @@
----
-- name: Install ntp(chrony) service & set timezone
-  hosts: all
-  become: yes
-
-
-  roles:
-    - chrony_timezone_setup
