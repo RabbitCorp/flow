@@ -1,0 +1,3 @@
+---
+# defaults file for docker_prune
+filter_var: until=56h

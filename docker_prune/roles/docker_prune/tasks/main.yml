@@ -1,0 +1,7 @@
+---
+# tasks file for docker_prune
+- name: Create cron tasks
+  ansible.builtin.cron:
+    name: "docker daily prune tasks"
+    special_time: daily
+    job: "docker volume prune -f && docker system prune -a --force --filter \"{{ filter_var }}\""

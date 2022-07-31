@@ -1,0 +1,4 @@
+[test]
+ansible-slave-Debian ansible_host=54.93.78.235 ansible_user=ubuntu ansible_ssh_private_key_file=./test-ansible1.pem
+ansible-slave-RedHat ansible_host=3.125.113.134 ansible_user=ec2-user ansible_ssh_private_key_file=./test-ansible1.pem 
+
