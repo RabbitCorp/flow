@@ -1,0 +1,3 @@
+---
+# defaults file for chrony_timezone_setup
+timezone_var: Europe/London

@@ -1,0 +1,31 @@
+---
+# tasks file for chrony_timezone_setup
+  - block:
+     - name: Install chrony for Debian
+       apt:
+         name: chrony
+         state: latest
+
+     - name: Config chrony for Debian
+       service:
+         name: chrony
+         state: started
+         enabled: yes
+    when: ansible_os_family == "Debian"
+
+  - block:
+     - name: Install chrony for RedHat
+       yum:
+         name: chrony
+         state: latest
+
+     - name: Config chrony for RedHat
+       service:
+         name: chronyd
+         state: started
+         enabled: yes
+    when: ansible_os_family == "RedHat"
+
+  - name: Set timezone
+    timezone:
+      name: "{{ timezone_var }}"
